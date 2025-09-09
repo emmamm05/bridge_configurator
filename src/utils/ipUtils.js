@@ -6,7 +6,13 @@ import ipaddr from 'ipaddr.js';
  * @returns {boolean} - True if the IP is valid, false otherwise.
  */
 export const validateIp = (ip) => {
-    return ipaddr.isValid(ip);
+    if (ipaddr.IPv6.isValid(ip)) {
+        return true;
+    }
+    if (ipaddr.IPv4.isValidFourPartDecimal(ip)) {
+        return true;
+    }
+    return false;
 };
 
 /**
