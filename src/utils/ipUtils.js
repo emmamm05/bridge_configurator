@@ -28,7 +28,10 @@ export const getIpVersion = (ip) => {
 };
 
 /**
- * This internal function converts a subnet mask into its CIDR prefix length. It can handle both CIDR notation (e.g., 24) and, for IPv4, dotted-decimal notation (e.g., 255.255.255.0). The ipForVersionDetection is used to determine whether to apply IPv4 or IPv6 validation rules.
+ * This internal function converts a subnet mask into its CIDR prefix length.
+ * It can handle both CIDR notation (e.g., 24) and, for IPv4, dotted-decimal
+ * notation (e.g., 255.255.255.0). The ipForVersionDetection is used to
+ * determine whether to apply IPv4 or IPv6 validation rules.
  * @param {string|number} subnet - The subnet mask to convert.
  * @param {string} ipForVersionDetection - An IP address to determine the IP version for validation.
  * @returns {number|null} - The CIDR prefix length or null if the subnet is invalid.
